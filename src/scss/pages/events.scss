@@ -1,3 +1,17 @@
+.events__title, .events__list-definition {
+    font-weight: 600;
+}
+.list-title {
+    font-weight: 450;
+    text-shadow: 1px 1px 8px white;
+}
+.indent {
+    padding-left: 2rem;
+}
+.indent2 {
+    padding-left: 4rem;
+}
+
 // -----Блок fluid-----
 #events_fluid {
     margin: 0;
@@ -28,11 +42,6 @@ div.events_confetti_an {
     height: $size;
     display: inline-block;
     position: absolute;
-    // left: 0; 
-    // right: 0;
-    // margin-left: auto; 
-    // margin-right: auto;
-    // width: 100px;
     left: 50%;
     top: 240%;
     transform: translate(-50%,-50%);
@@ -75,10 +84,16 @@ div.events_confetti_an {
 
 // -----Блока keys-----
 #keyInput {
-    width: 30px;
-    font-size: 18px;
-    padding: 5px 10px;
+    width: 5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 5%;
+    background-color: #33c8af2f;
 }
 .key-color {
-    color: red;
+    color: #cc3366;
+    font-weight: 700;
+}
+th {
+    width: 20%;
 }

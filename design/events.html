@@ -14,9 +14,6 @@
     <!-- materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- materialize css -->
-    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
-
     <!--    project styles-->
     <link rel="stylesheet" href="./assets/dist/css/main.css">
     <link rel="stylesheet" href="./assets/libraries/highlights/styles/atom-one-light.min.css">
@@ -32,7 +29,6 @@
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="api.html">API</a></li>
             <li><a href="arrays.html">Arrays</a></li>
-            <li><a href="dom.html">DOM</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="glossary.html">Glossary</a></li>
             <li><a href="ifelse.html">If Else</a></li>
@@ -42,7 +38,6 @@
             <li><a href="this.html">this</a></li>
             <li><a href="timedate.html">TimeDate</a></li>
             <li><a href="types.html">Types</a></li>
-            <li><a href="variables.html">Variables</a></li>
             <li><a href="web.html">Web</a></li>
         </ul>
         <nav class="teal lighten-1">
@@ -62,52 +57,52 @@
         <p>Событие — это сигнал от браузера о том, что что-то произошло. Все <abbr>DOM</abbr>-узлы подают такие сигналы (хотя события
             бывают и не только в <abbr>DOM</abbr>).</p>
         <div class="events-main__why">
-            <h5>Зачем нужны:</h5>
+            <h5 class="events__title">Зачем нужны:</h5>
             <p>На такие события можно назначит функцию-обработчик, которая сработает, как только событие произошло. Благодаря этому код JavaScript может реагировать на различные действия пользователя.</p>
         </div>
 
         <div class="events-main__which">
-            <h5>Какие бывают:</h5>
+            <h5 class="events__title">Какие бывают:</h5>
             <div class="container">
                 <div class="row">
                     <div class="col s12">
                         <ul class="collapsible popout">
                             <li>
-                                <div class="collapsible-header teal lighten-5">События мыши</div>
+                                <div class="collapsible-header teal lighten-5 list-title">События мыши</div>
                                 <div class="collapsible-body">
-                                    <span class="list-title">click</span> — происходит, когда кликнули на элемент левой
+                                    <span class="events__list-definition">click</span> — происходит, когда кликнули на элемент левой
                                     кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).<br>
-                                    <span class="list-title">contextmenu</span> — происходит, когда кликнули на элемент
+                                    <span class="events__list-definition">contextmenu</span> — происходит, когда кликнули на элемент
                                     правой кнопкой мыши.<br>
-                                    <span class="list-title">mouseover/mouseout</span> — когда мышь наводится
+                                    <span class="events__list-definition">mouseover/mouseout</span> — когда мышь наводится
                                     на/покидает элемент.<br>
-                                    <span class="list-title">mousedown/mouseup</span> — когда нажали/отжали кнопку мыши
+                                    <span class="events__list-definition">mousedown/mouseup</span> — когда нажали/отжали кнопку мыши
                                     на элементе.<br>
-                                    <span class="list-title">mousemove</span> — при движении мыши.
+                                    <span class="events__list-definition">mousemove</span> — при движении мыши.
                                 </div>
                             </li>
                             <li>
-                                <div class="collapsible-header teal lighten-4">События на элементах управления</div>
+                                <div class="collapsible-header teal lighten-4 list-title">События на элементах управления</div>
                                 <div class="collapsible-body">
-                                    <span class="list-title">submit</span> — пользователь отправил форму
+                                    <span class="events__list-definition">submit</span> — пользователь отправил форму
                                     &lt;form&gt;.<br>
-                                    <span class="list-title">focus</span> — пользователь фокусируется на элементе,
+                                    <span class="events__list-definition">focus</span> — пользователь фокусируется на элементе,
                                     например нажимает на &lt;input&gt;.
                                 </div>
                             </li>
                             <li>
-                                <div class="collapsible-header teal lighten-3">Клавиатурные события</div>
+                                <div class="collapsible-header teal lighten-3 list-title">Клавиатурные события</div>
                                 <div class="collapsible-body">
-                                    <span class="list-title">keydown/keyup</span> — когда пользователь
+                                    <span class="events__list-definition">keydown/keyup</span> — когда пользователь
                                     нажимает/отпускает клавишу.<br>
-                                    <span class="list-title">keypress</span> — событие происходит, когда пользователь
+                                    <span class="events__list-definition">keypress</span> — событие происходит, когда пользователь
                                     нажал клавишу на клавиатуре над элементом.
                                 </div>
                             </li>
                             <li>
-                                <div class="collapsible-header  teal lighten-2">События документа</div>
+                                <div class="collapsible-header  teal lighten-2 list-title">События документа</div>
                                 <div class="collapsible-body">
-                                    <span class="list-title">DOMContentLoaded</span> — когда <abbr>HTML</abbr> загружен и обработан,
+                                    <span class="events__list-definition">DOMContentLoaded</span> — когда <abbr>HTML</abbr> загружен и обработан,
                                     <abbr>DOM</abbr> документа полностью построен и доступен.
                                 </div>
                             </li>
@@ -120,14 +115,14 @@
         </div>
 
         <div class="events-main__how">
-            <h5>Как назначить событие:</h5>
+            <h5 class="events__title">Как назначить событие:</h5>
             <div class="container">
                 <div class="row">
                     <div class="col s12">
 
                         <ul class="collapsible popout">
                             <li>
-                                <div class="collapsible-header teal lighten-5">Атрибут <abbr>HTML</abbr>: onclick="..."</div>
+                                <div class="collapsible-header teal lighten-5 list-title">Атрибут <abbr>HTML</abbr>: onclick="..."</div>
                                 <div class="collapsible-body">
                                     <abbr>HTML</abbr>-атрибуты используются редко потому, что JavaScript в <abbr>HTML</abbr>-теге выглядит немного
                                     странно. К тому же много кода там не напишешь.<br>
@@ -157,7 +152,7 @@
                                         }
                                     </script>
 
-                                    <input type="button" onclick="count()" value="Считать до трёх!">
+                                    <input class="waves-effect waves-light btn" type="button" onclick="count()" value="Считать до трёх!">
                                 </div>
                             </li>
                             <li>
@@ -180,7 +175,7 @@
                                                 </code>
                                             </pre>
                                     </div>
-                                    <input id="elem" type="button" value="Нажми на кнопку!">
+                                    <input id="elem" type="button" class="waves-effect waves-light btn" value="Нажми на кнопку!">
                                     <script>
                                         elem.onclick = function () {
                                             alert('Получишь результат!');
@@ -189,7 +184,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="collapsible-header teal lighten-3">Специальные методы: elem.addEventListener(event,
+                                <div class="collapsible-header teal lighten-3 list-title">Специальные методы: elem.addEventListener(event,
                                     handler[, phase]) для добавления, removeEventListener для удаления
                                 </div>
                                 <div class="collapsible-body">
@@ -198,36 +193,36 @@
                                     DOMContentLoaded. Также addEventListener поддерживает объекты в качестве
                                     обработчиков событий. В этом случае вызывается метод объекта handleEvent.
                                     <br><br>
-                                    element.addEventListener(eventType, handler, options)
+                                    <span class="events__list-definition">element.addEventListener(eventType, handler, options)</span>
                                     <ul class="indented-list">
-                                        <li><span class="list-title">element</span> — любой HTMLElement на странице</li>
-                                        <li><span class="list-title">eventType</span> — строка, содержащая название
+                                        <li><span class="events__list-definition">element</span> — любой HTMLElement на странице</li>
+                                        <li><span class="events__list-definition">eventType</span> — строка, содержащая название
                                             события. Наиболее популярные события 'click', 'change', 'submit', 'keydown',
                                             'mousemove', 'mouseenter', 'mouseleave'.
                                         </li>
-                                        <li><span class="list-title">handler</span> — функция, которая будет вызвана,
+                                        <li><span class="events__list-definition">handler</span> — функция, которая будет вызвана,
                                             когда событие произойдет.
                                         </li>
-                                        <li><span class="list-title">options/capture</span> — необязательный параметр,
+                                        <li><span class="events__list-definition">options/capture</span> — необязательный параметр,
                                             который описывает дополнительные свойства для срабатывания события.
                                             <ul class="veryindented-list">
-                                                <li><span class="list-title">capture</span> — включает или выключает
+                                                <li class="indent"><span class="events__list-definition">capture</span> — включает или выключает
                                                     захват события элементом, на который установлен обработчик. Это
                                                     значит, что событие сначала сработает на элементе и только потом
                                                     сработает на всех вложенных элементах. Принимает значение true или
                                                     false.
                                                 </li>
-                                                <li><span class="list-title">options: { capture: bool, passive: bool, once: bool }</span>
+                                                <li class="indent"><span class="events__list-definition">options: { capture: bool, passive: bool, once: bool }</span>
                                                     — при передаче объекта аргумент будет распознан как объект настроек,
                                                     так можно установить больше параметров.
                                                     <ul>
-                                                        <li><span class="list-title">passive</span> – говорит о том, что
+                                                        <li class="indent2"><span class="events__list-definition">passive</span> – говорит о том, что
                                                             внутри handler никогда не будет вызвана функция
                                                             event.preventDefault(), если функция event.preventDefault()
                                                             все-таки вызвана, браузер должен её игнорировать и выводить
                                                             предупредительное сообщение в консоль.
                                                         </li>
-                                                        <li><span class="list-title">once</span> – включает
+                                                        <li class="indent2"><span class="events__list-definition">once</span> – включает
                                                             автоматическую отписку от события после первого
                                                             срабатывания.
                                                         </li>
@@ -237,15 +232,15 @@
                                         </li>
                                     </ul>
                                     <br>
-                                    У объекта event есть специальные методы, такие как <span class="list-title">preventDefault()</span>
-                                    и <span class="list-title">stopPropagation()</span>. Остальные методы практически не
+                                    У объекта event есть специальные методы, такие как <span class="events__list-definition">preventDefault()</span>
+                                    и <span class="events__list-definition">stopPropagation()</span>. Остальные методы практически не
                                     используются:
                                     <ul>
-                                        <li><span class="list-title">preventDefault()</span> позволяет заблокировать
+                                        <li class="indent"><span class="events__list-definition">preventDefault()</span> позволяет заблокировать
                                             стандартное поведение браузера. Например, по клику на ссылке — заблокировать
                                             переход по этой ссылке;
                                         </li>
-                                        <li><span class="list-title">stopPropagation()</span> позволяет остановить
+                                        <li class="indent"><span class="events__list-definition">stopPropagation()</span> позволяет остановить
                                             всплытие события по DOM-дереву.
                                         </li>
                                     </ul>
@@ -288,16 +283,16 @@
         </div>
 
         <div class="events-main__fun">
-            <h5>А теперь повеселимся!</h5>
+            <h5 class="events__title">А теперь повеселимся!</h5>
             <p>Ниже будут примеры использования событий. Почувствуй разницу!</p>
 
             <div id="events_fluid">
                 <h6>Жидкость</h6>
-                В данной анимации используются 4 браузерных события: mouseup, mousemove, mousedown и click (для кнопки
+                В данной анимации используются 4 браузерных события: <span class="events__list-definition">mouseup</span>, <span class="events__list-definition">mousemove</span>, <span class="events__list-definition">mousedown</span> и <span class="events__list-definition">click</span> (для кнопки
                 изменения цветов). <br><br>
 
                 <div id="events_fluid_field">
-                    <button id="events_fluid_reset">Новые цвета</button>
+                    <button id="events_fluid_reset" class="waves-effect waves-light btn">Новые цвета</button>
 
                     <canvas id="events_fluid_c"></canvas>
                 </div>
@@ -307,10 +302,10 @@
             <br><br>
             <div id="events_confetti">
                 <h6>Конфетти</h6>
-                А здесь использованы всего 2 события: mousedown — конфетти появляются и живут своей жизнью, mouseup —
-                они исчезают (ощути отличие от click). Как далеко разлетятся эти наглые цветные шарики? Решать только
+                А здесь использованы всего 2 события: <span class="events__list-definition">mousedown</span> — конфетти появляются и живут своей жизнью, <span class="events__list-definition">mouseup</span> —
+                они исчезают (ощути отличие от <span class="events__list-definition">click</span>). Как далеко разлетятся эти наглые цветные шарики? Решать только
                 тебе! <br><br>
-                <button id="events_confetti_btn">Конфетти</button>
+                <button id="events_confetti_btn" class="waves-effect waves-light btn">Конфетти</button>
 
                 <div class="events_confetti_an" data-un><p class="events_confetti_an"></p></div>
                 <div class="events_confetti_an" data-un><p class="events_confetti_an"></p></div>
@@ -494,10 +489,10 @@
             <br><br>
             <div id="events_keys">
                 <h6>Коды клавиш</h6>
-                Поставьте курсор в поле ввода и нажмите любую клавишу: <input id="keyInput" type="text"><br>
-                А вы заметили, что keypress не такой как все? На какие клавиши это событие не реагирует? Как отличаются
-                коды заглавных букв и строчных? А цифр верхнего блока клавиатуры и бокового? А совпадают ли keyCode
-                одной и той же клавиши, но с разной языковой раскладкой? А code? Войдет ли это в топ-7 загадок
+                Поставь курсор в поле ввода и нажми любую клавишу: <input id="keyInput" type="text"><br>
+                А ты заметила, что <span class="events__list-definition">keypress</span> не такой как все? На какие клавиши это событие не реагирует? Как отличаются
+                коды заглавных букв и строчных? А цифр верхнего блока клавиатуры и бокового? А совпадают ли <span class="events__list-definition">keyCode</span>
+                одной и той же клавиши, но с разной языковой раскладкой? А <span class="events__list-definition">code</span>? Войдет ли это в топ-7 загадок
                 Вселенной?
                 <table class="RealTable" width="100%">
                     <tbody>
@@ -536,15 +531,15 @@
                     </tr>
                     </tbody>
                 </table>
-                <br>KeyPress возвращает <abbr>ASCII</abbr> код нажатого символа. Это значит, что событие вернёт разные коды, если
-                пользователь нажал по букве "а", или "А", или "f", несмотря на то, что на клавиатуре это одна и та же
+                <br><br>На самом деле, все вполне логично.<span class="events__list-definition">KeyPress</span> возвращает <span class="events__list-definition"><abbr>ASCII</abbr></span> код нажатого символа. Это значит, что событие вернёт разные коды, если
+                пользователь нажал по букве "<span class="events__list-definition">а</span>", или "<span class="events__list-definition">А</span>", или "<span class="events__list-definition">f</span>", несмотря на то, что на клавиатуре это одна и та же
                 кнопка. Т.е. это событие учитывает регистр символа, языковую раскладку, состояние клавиш Shift, Caps
-                Lock, Alt, Ctrl. Можно сказать, что это более «интеллектуальное» событие по сравнению с keyDown/keyUp.
+                Lock, Alt, Ctrl. Можно сказать, что это более «интеллектуальное» событие по сравнению с <span class="events__list-definition">keyDown/keyUp</span>.
                 <br>
-                Хоть onKeyPress и учитывает состояние Shift, Caps Lock, Alt, Ctrl, т.к. они влияют на то, как и какой
+                Хоть <span class="events__list-definition">onKeyPress</span> и учитывает состояние Shift, Caps Lock, Alt, Ctrl, т.к. они влияют на то, как и какой
                 именно отобразится символ, но с помощью этого события нельзя определить состояние этих клавиш. Для этого
-                нужно использовать keyUp/keyDown.<br>
-                Два простых и похожих свойства: keyCode возвращает код нажатой клавиши, keyChar — <abbr>ASCII</abbr> код нажатого
+                нужно использовать <span class="events__list-definition">keyUp/keyDown</span>.<br>
+                Два простых и похожих свойства: <span class="events__list-definition">keyCode</span> возвращает код нажатой клавиши, <span class="events__list-definition">keyChar</span> — <abbr>ASCII</abbr> код нажатого
                 символа. Как понимаешь, при нажатии одной клавиши, значения этих свойств должны отличаться.<br><br>
             </div>
         </div>
