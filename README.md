@@ -1,6 +1,6 @@
 # JS guide
 
-https://yulialugovaya.github.io/that1quiz/
+https://yulialugovaya.github.io/js-cheatsheet/
 
 ## Development
 
